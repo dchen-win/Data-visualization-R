@@ -1,38 +1,99 @@
-# Exploratory Data Visualization of Chocolate Sales
+# 🍫 Exploratory Data Visualization of Chocolate Sales
 
-**Author**: Cindy (Di) Chen  
-**Date**: `r Sys.Date()`  
-**Output Format**: PDF document (LaTeX engine: `xelatex`)  
+**Author**: Cindy Chen  
+**Date**: Spring 2025
 
-## Overview
-This project presents an exploratory data visualization analysis of chocolate sales data. The dataset includes transaction-level records with dates, products, amounts, and country-level information. The goal is to identify key sales trends across time, geography, and product categories to inform business decisions related to inventory and marketing.
+---
 
-## Objectives
-- Analyze **country-level revenue performance**
-- Explore **monthly/seasonal sales trends**
-- Identify **top-selling products** to support inventory prioritization
+## 📄 Overview
 
-## Key Steps
-- Cleaned inconsistent date formats using `lubridate::dmy`
-- Parsed and converted currency-formatted strings to numeric
-- Removed duplicates and missing values
-- Created clear, annotated, and colorblind-friendly `ggplot2` visualizations
+This project explores chocolate sales data to uncover trends in geography, seasonality, and product performance. The analysis includes data wrangling, visual exploration, and design of accessible, polished plots using the `ggplot2` package in R.
 
-## Visual Insights
+---
 
-### 1. Total Amount by Country
-- **Australia** leads in sales, followed by the **UK**, **India**, **USA**, **Canada**, and **New Zealand**.
-- Findings challenge assumptions about the US being the top market, prompting further regional investigation.
+## 🎯 Objectives
 
-### 2. Monthly Sales Trend
-- Sales **peak in January**, dip in **February**, and fluctuate through the summer.
-- January’s post-holiday peak and March’s rise inform potential promotional strategies.
+- Examine **country-level revenue** performance  
+- Analyze **monthly/seasonal sales trends**  
+- Identify **top-performing chocolate products**  
+- Create **colorblind-friendly visualizations** with clear annotations  
 
-### 3. Top 10 Selling Products
-- **“Smooth Silky Salty”** is the highest-grossing item, followed by **“50% Dark Bites”** and **“White Choc”**.
-- These products should be prioritized for inventory during peak sales periods.
+---
 
-## Tools & Packages
-- `tidyverse`, `lubridate`, `dplyr`, `stringr`, `scales`
-- Visualizations built with `ggplot2`, formatted for clarity and accessibility
+## 🧾 Dataset Description
 
+The dataset includes transaction-level chocolate sales records, with variables such as:
+
+- `Date`: Transaction date  
+- `Product`: Chocolate product name  
+- `Amount`: Sale amount (currency)  
+- `Country`: Country of sale  
+
+Data was cleaned and transformed using `tidyverse`, `lubridate`, and `stringr`. Sales amounts were standardized, and missing/duplicate entries removed.
+
+---
+
+## 🔍 Methodology
+
+### 1. Data Wrangling  
+- Converted date strings using `lubridate::dmy()`  
+- Removed duplicates and NA values  
+- Cleaned and parsed currency formats to numeric
+
+### 2. Visualization Strategy  
+- Built three key plots using `ggplot2`  
+- Applied consistent themes, labels, and colorblind-friendly palettes  
+- Included direct annotations to highlight insights  
+
+---
+
+## 📊 Visualizations
+
+### 🌍 Total Amount by Country  
+- Top countries: **Australia**, **UK**, **India**, **USA**, **Canada**, **New Zealand**  
+- 💡 Australia is the clear leader, suggesting regional demand differences  
+
+### 📆 Monthly Sales Trend  
+- 📈 Peak in **January** (post-holiday purchases), dip in **February**, recovery in **March**  
+- 🏖️ Slower summer months — useful for inventory planning  
+
+### 🍬 Top 10 Best-Selling Products  
+- 🥇 "Smooth Silky Salty" is the #1 product  
+- Others include "50% Dark Bites", "White Choc", "Orange Crunch", etc.  
+- 💡 Clear candidates for promotional focus  
+
+---
+
+## 📦 Tools & Libraries
+
+- **R packages**:  
+  - `tidyverse`, `lubridate`, `stringr`, `scales`  
+  - `ggplot2` for visualization  
+- **Rendering**:  
+  - `rmarkdown` with `xelatex` for high-quality PDF output  
+
+---
+
+## ✅ Key Insights
+
+- 🌏 **Australia** consistently ranks highest in revenue  
+- 📆 Clear **seasonal patterns**, with January as the sales peak  
+- 🍫 Product rankings suggest **clear demand leaders** that warrant promotion or bulk stock
+
+---
+
+## 🚀 Future Work
+
+- 📈 Build **forecast models** for monthly sales using time series  
+- 🔍 Add demographic or marketing campaign data to explain peaks  
+- 🌐 Create interactive dashboards for real-time business decision-making
+
+---
+
+## 📁 Deliverables
+
+- 📄 PDF Report (includes code, visuals, and commentary)  
+- 🧼 Fully reproducible R script (`chocolate_sales_viz.Rmd`)  
+- 📊 Three finalized, annotated plots  
+
+---
